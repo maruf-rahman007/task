@@ -2,7 +2,7 @@ To get started with this quick starter, follow these steps:
 
 1.  **Clone Repository**: Run the following command to clone the repository:
 
-        git clone https://github.com/maruf-rahman007/LinkHive.git
+        git clone https://github.com/maruf-rahman007/task.git
 
 2.  **Install Dependencies**: Install the required dependencies by running either of the following commands:
 
