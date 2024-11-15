@@ -19,7 +19,7 @@ const testimonials = [
   {
     quote:
       "I love the interactive elements and the community forums where I can connect with other learners.",
-    name:"No name",
+    name:"Anonymous",
     title: "A Tale of Two Cities",
   },
   {

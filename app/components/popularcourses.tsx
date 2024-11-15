@@ -3,10 +3,12 @@ import { useState, useRef } from 'react';
 import CourseCard from "./coursecard";
 
 export default function PopularCourse() {
+    //references of scroll handler
     const scrollContainerRef = useRef<HTMLDivElement>(null);
     const [canScrollLeft, setCanScrollLeft] = useState(false);
     const [canScrollRight, setCanScrollRight] = useState(true);
 
+    //scroll left or right based on the direction
     const scroll = (direction: 'left' | 'right') => {
         const container = scrollContainerRef.current;
         if (container) {
@@ -15,15 +17,16 @@ export default function PopularCourse() {
         }
     };
 
+    //check if the container can scroll left or right
     const checkScroll = () => {
         const container = scrollContainerRef.current;
         if (container) {
-            setCanScrollLeft(container.scrollLeft > 0);
-            setCanScrollRight(container.scrollLeft < container.scrollWidth - container.clientWidth);
+            setCanScrollLeft(container.scrollLeft > 0); // Can scroll left if scrollLeft > 0
+            setCanScrollRight(container.scrollLeft < container.scrollWidth - container.clientWidth); // Can scroll right if it's not at the end
         }
     };
 
-    // Dynamic course data
+    //static course data IRL fetch from BE
     const courses = [
         {
             title: "Foundation of Sleep: Sleep Science and Sleep Disorders",
@@ -106,23 +109,27 @@ export default function PopularCourse() {
     ];
 
     return (
-        <div className="pl-40 ml-20 pt-20">
+        <div className="pl-8 sm:pl-40 sm:ml-20 pt-20">
             <h1 className="font-onest text-3xl font-bold mb-4">Our popular courses</h1>
-            <div className="flex justify-between items-center mb-6">
+            {/* description and scroll buttons */}
+            <div className="sm:flex justify-between items-center mb-6">
                 <p className="font-onest max-w-2xl">
                     By taking proactive steps to nurture mental health, we can enhance our quality of life,
                     build resilience, and foster a sense of inner peace and balance
                 </p>
                 <div className="flex space-x-3 mr-20 pr-40">
+                    {/*left scroll*/}
                     <button onClick={() => scroll('left')} disabled={!canScrollLeft}>
                         <img src="/leftarrow.png" alt="Scroll left" className="w-10 h-10" />
                     </button>
+                    {/*right scroll*/}
                     <button onClick={() => scroll('right')} disabled={!canScrollRight}>
                         <img src="/rightarrow.png" alt="Scroll right" className="w-10 h-10" />
                     </button>
                 </div>
             </div>
             <div ref={scrollContainerRef} onScroll={checkScroll} className="flex gap-6 overflow-x-auto scrollbar-hide">
+                {/*mapping through courses to render CourseCard*/}
                 {courses.map((course, index) => (
                     <CourseCard key={index} course={course} />
                 ))}

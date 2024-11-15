@@ -2,7 +2,8 @@
 
 export default function Providings() {
     return (
-        <div className="p-40 flex pt-20 m-20 pb-10">
+        <div className="p-10 sm:p-40 sm:flex sm:pt-20 sm:m-20 sm:pb-10">
+            {/* left container */}
             <div className="flex-1">
                 <h1 className="font-onest font-bold text-3xl">We provide...</h1>
                 <div className="flex pt-10">
@@ -28,7 +29,8 @@ export default function Providings() {
                     <button className="text-xs font-onest px-3 py-2 bg-white text-teal-700 rounded-full border border-teal-700">Learn More About Our Services</button>
                 </div>
             </div>
-            <div className="flex-1">
+            {/* right continer */}
+            <div className="pt-8 sm:flex-1">
                 <img src="/providings.png" alt="" />
             </div>
         </div>
