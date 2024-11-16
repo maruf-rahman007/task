@@ -2,7 +2,7 @@
 export default function Hero() {
     return (
         <div className="bg-custom-bg">
-            <div className="sm:px-40 sm:mx-20">
+            <div className="sm:px-40 sm:mx-20 md:px-10 md:mx-8 lg:px-40 lg:mx-20">
                 {/* Main Container */}
                 <div className="sm:container sm:flex items-center px-5">
                     {/* Left Container with text and Buttons */}
@@ -29,7 +29,7 @@ export default function Hero() {
                             Health is not just about what you're eating.
                             It's also <br /> about what you're thinking and saying.
                         </p>
-                        <div className="mt-6 space-x-4">
+                        <div className="mt-6 space-x-4 md:space-y-2">
                             <button className="font-onest px-5 py-2 bg-teal-700 text-white rounded-full hover:bg-teal-600">Browse Courses</button>
                             <button className="font-onest px-5 py-2 bg-white text-teal-700 rounded-full border border-teal-700">Get Started</button>
                         </div>

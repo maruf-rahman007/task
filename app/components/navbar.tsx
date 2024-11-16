@@ -9,16 +9,16 @@ export default function Navbar() {
     const [navopen, setNavOpen] = useState(false);
     return (
         //Top Level
-        <nav className="lg:w-full bg-white border-b border-gray-200 py-4 sm:px-40">
-            <div className="flex justify-between items-center mx-20">
+        <nav className="lg:w-full bg-white border-b border-gray-200 py-4 sm:px-40 md:px-10 lg:px-40 px-20">
+            <div className="flex justify-between items-center sm:mx-20 md:mx-10 lg:mx-20">
                 {/* Logo part */}
                 <Link href="/">
-                    <div className="text-2xl font-semibold">
+                    <div className="text-2xl font-semibold lg:pr-0 md:pr-5">
                         Logo
                     </div>
                 </Link>
                 {/* Desktop View hidden for smaller devices */}
-                <div className="hidden sm:space-x-5 sm:flex">
+                <div className="hidden sm:space-x-5 md:space-x-1.6 lg:space-x-5 sm:flex">
                     <NavItem label="Courses" icon={iconPath} href="/courses" />
                     <NavItem label="Instructors" icon={iconPath} href="/instructors" />
                     <NavItem label="Blogs" icon={iconPath} href="/blogs" />
@@ -33,7 +33,7 @@ export default function Navbar() {
                         </div>
                     </Link>
                 </div>
-                <div className="hidden sm:flex items-center space-x-6">
+                <div className="hidden sm:flex items-center space-x-6 md:pl-3 lg:pl-0">
                     <Link href="/cart">
                         <img className="max-h-5" src="/carticon.png" alt="" />
                     </Link>

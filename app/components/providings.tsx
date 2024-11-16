@@ -2,7 +2,7 @@
 
 export default function Providings() {
     return (
-        <div className="p-10 sm:p-40 sm:flex sm:pt-20 sm:m-20 sm:pb-10">
+        <div className="p-10 sm:p-40 sm:flex sm:pt-20 sm:m-20 sm:pb-10 md:p-10 md:pt-10 md:m-5 md:pb-10 lg:p-40 lg:flex lg:pt-20 lg:m-20 lg:pb-10">
             {/* left container */}
             <div className="flex-1">
                 <h1 className="font-onest font-bold text-3xl">We provide...</h1>

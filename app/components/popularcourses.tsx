@@ -109,7 +109,7 @@ export default function PopularCourse() {
     ];
 
     return (
-        <div className="pl-8 sm:pl-40 sm:ml-20 pt-20">
+        <div className="pl-8 sm:pl-40 sm:ml-20 pt-20 md:ml-10 md:pl-20 lg:pl-40 lg:ml-20">
             <h1 className="font-onest text-3xl font-bold mb-4">Our popular courses</h1>
             {/* description and scroll buttons */}
             <div className="sm:flex justify-between items-center mb-6">
@@ -117,10 +117,10 @@ export default function PopularCourse() {
                     By taking proactive steps to nurture mental health, we can enhance our quality of life,
                     build resilience, and foster a sense of inner peace and balance
                 </p>
-                <div className="flex space-x-3 mr-20 pr-40">
+                <div className="sm:flex space-x-3 sm:mr-20 sm:pr-40 md:mr-10 md:pr-20 lg:mr-20 lg:pr-40">
                     {/*left scroll*/}
                     <button onClick={() => scroll('left')} disabled={!canScrollLeft}>
-                        <img src="/leftarrow.png" alt="Scroll left" className="w-10 h-10" />
+                        <img src="/leftarrow.png" alt="Scroll left" className="w-10 h-10 " />
                     </button>
                     {/*right scroll*/}
                     <button onClick={() => scroll('right')} disabled={!canScrollRight}>
